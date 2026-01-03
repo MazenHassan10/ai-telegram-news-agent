@@ -1,6 +1,9 @@
 from telegram.ext import ApplicationBuilder, CommandHandler
 from db import init_db, add_topic, remove_topic, get_topics
 import os
+from dotenv import load_dotenv
+
+load_dotenv()  # <-- this loads .env into os.environ
 
 BOT_TOKEN = os.environ["BOT_TOKEN"]
 
